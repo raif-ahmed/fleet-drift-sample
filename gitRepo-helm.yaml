@@ -10,7 +10,7 @@ spec:
   branch: main
   
   paths:
-    - apps/*
+    - helm
   
   targets:
     - name: all-downstream

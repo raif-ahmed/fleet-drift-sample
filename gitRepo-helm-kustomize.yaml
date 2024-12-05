@@ -1,0 +1,31 @@
+kind: GitRepo
+apiVersion: fleet.cattle.io/v1alpha1
+metadata:
+  name: fleet-drift-sample
+  namespace: fleet-default
+labels:
+  owner-repo: fleet-drift-sample
+spec:
+  repo: https://github.com/raif-ahmed/fleet-drift-sample
+  branch: main
+  
+  paths:
+    - helm-kustomize
+  
+  targets:
+    - name: all-downstream
+      clusterSelector: {}
+  
+  pollingInterval: 15s
+
+  # Paused  causes changes in Git to not be propagated down to the clusters but
+  # instead mark resources as OutOfSync
+  # paused: false
+
+  # Increment this number to force a redeployment of contents from Git
+  #
+  # forceSyncGeneration: 0
+  correctDrift:
+    enabled: false
+  keepResources: false
+  deleteNamespace: true
