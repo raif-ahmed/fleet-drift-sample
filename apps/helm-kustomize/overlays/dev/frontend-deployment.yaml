@@ -6,4 +6,15 @@ spec:
   template:
     spec:
       containers:
-        - image: gcr.io/google-samples/gb-frontend:v5
+      - image: gcr.io/google-samples/gb-frontend:v5
+        imagePullPolicy: IfNotPresent
+        name: php-redis
+        ports:
+          - containerPort: 80
+            protocol: TCP
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
