@@ -27,5 +27,7 @@ spec:
   # forceSyncGeneration: 0
   correctDrift:
     enabled: true
+  # KeepResources specifies if the resources created must be kept after deleting the *GitRepo*.
   keepResources: false
+  # DeleteNamespace specifies if the namespace created must be deleted after deleting the *GitRepo*.
   deleteNamespace: true
