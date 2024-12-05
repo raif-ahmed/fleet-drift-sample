@@ -4,6 +4,4 @@ metadata:
   name: helm-kustomize
   namespace: fleet-local
 spec:
-  repo: https://github.com/rancher/fleet-examples
-  paths:
-  - single-cluster/helm-kustomize
+  repo: https://github.com/raif-ahmed/fleet-drift-sample
