@@ -8,9 +8,15 @@ labels:
 spec:
   repo: https://github.com/raif-ahmed/fleet-drift-sample
   branch: main
-
+  
+  paths:
+    - apps/*
+  
+  targets:
+    - name: all-downstream
+      clusterSelector: {}
+  
   pollingInterval: 15s
-
 
   # Paused  causes changes in Git to not be propagated down to the clusters but
   # instead mark resources as OutOfSync
