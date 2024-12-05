@@ -25,3 +25,5 @@ spec:
   # Increment this number to force a redeployment of contents from Git
   #
   # forceSyncGeneration: 0
+  keepResources: false
+  deleteNamespace: true
