@@ -1,3 +1,4 @@
 patchesStrategicMerge:
 - redis-slave-deployment.yaml
 - redis-slave-service.yaml
+- frontend-deployment.yaml
